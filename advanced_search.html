@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .n1xJcf {
+                display: flex;
+                align-items: center;
+                padding: 6px;
+                height: 64px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                transition: box-shadow 250ms;
+                z-index: 986;
+                width: 1024px;
+                vertical-align: middle;
+            }
+            .Lx3lgb {
+                display: inline-block;
+                flex-grow: 1;
+                min-width: 1008px;
+                transition: box-shadow 250ms;
+                z-index: 986;
+                height: 64px;
+                vertical-align: middle;
+            }
+            .gb_Na {
+                min-width: auto;
+                z-index: 986;
+                height: 48px;
+                position: relative;
+                transition: box-shadow 250ms;
+                display: block;
+            }
+            .gb_yd {
+                float: right;
+                padding-left: 32px;
+                box-sizing: border-box;
+                height: 48px;
+                line-height: normal;
+                padding: 0 4px;
+                flex: 0 0 auto;
+                justify-content: flex-end;
+                vertical-align: middle;
+                white-space: nowrap;
+                align-items: center;
+                display: flex;
+
+            }
+            .gb_Sd {
+                float: right;
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_l {
+                padding-left: 4px;
+                padding: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+
+            }
+            .gb_g {
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_d {
+                cursor: pointer;
+                text-decoration: none;
+                opacity: 1;
+                background-position: -64px -29px;
+                border-radius: 50%;
+                padding: 8px;
+                display: inline-block;
+                outline: none;
+                vertical-align: middle;
+                box-sizing: border-box;
+                height: 40px;
+                width: 40px;
+                line-height: normal;
+            }
+            .gb_d:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+
+            }
+            .gb_i {
+                color: #5f6368;
+                opacity: 1;
+                height: 24px;
+                width: 24px;
+                font-weight:700;
+            }
+
+            .gb_H {
+                flex: 0 1 auto;
+                padding: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_bb {
+                flex: 0 1 auto;
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_Da {
+                cursor: pointer;
+                background-position: -64px -29px;
+                text-decoration: none;
+                padding: 4px;
+                flex: 0 1 auto;
+                border-radius: 50%;
+                display: inline-block;
+                outline: none;
+                vertical-align: middle;
+                box-sizing: border-box;
+                height: 40px;
+                width: 40px;
+            }
+            .gb_Da:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+            }
+            .gbii {
+                background-size: 32px 32px;
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 0px;
+                position: relative;
+                height: 32px;
+                width: 32px;
+                z-index: 0;
+                
+                cursor: pointer;
+                line-height: normal;
+                white-space: nowrap;
+            }
+            .gbii:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+            }
+            .gb_d:hover {
+                background-color: #f1eff2f2;
+                opacity: 1;
+            }
+            .gb_Da:hover {
+                background-color: #f1eff2f2;
+                opacity: 1;
+            }
+            .gb_nd {
+                flex: 1 1 auto;
+                overflow: hidden;
+                padding-right: 30px;
+                box-sizing: border-box;
+                height: 48px;
+                vertical-align: middle;
+                white-space: nowrap;
+                align-items: center;
+                display: flex;
+                width: 898px;
+                justify-content: flex-start;
+                float: left;
+            }
+            .gb_Dc {
+                -webkit-box-align: center;
+                align-items: center;
+                display: flex;
+                position: relative;
+                top: 2px;
+                vertical-align: baseline;
+            }
+            .gb_Ec {
+                padding-left: 12px;
+                line-height: normal;
+                position: relative;
+                vertical-align: baseline;
+
+            }
+            .gb_Fc {
+                display: inline-block;
+                vertical-align: middle;
+                outline: none;
+            }
+            .gb_Kc {
+                height: 24px;
+                width: 74px;
+                display: inline-block;
+                vertical-align: middle;
+                
+            }
+            .bottom-wrapper {
+                min-height: 100%;
+                margin: 0 auto -60px;
+                vertical-align: baseline;
+            }
+            .appbar {
+                color: #d93025;
+                font-size: 20px;
+                margin: 25px 35px;
+                vertical-align: baseline;
+            }
+            .Mza7yc {
+                max-width: 1140px;
+                min-width: 200px;
+                width: 96%;
+                margin: 40px 2% 0 45px;
+            }
+            .otByu {
+                width: 100%;
+                clear: both;
+                display: block;
+                
+            }
+            .yIQOUb {
+                clear: both;
+                display: block;
+            }
+            .I1Kbt {
+                float: left;
+                display: inline;
+                min-width: 167px;
+                width: 16%;
+                font-size: 16px;
+                min-height: 42px;
+                font-weight: 500;
+                color: #333;
+                vertical-align: middle;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .loTAE {
+                height: 30px;
+                display: table-cell;
+                vertical-align: middle;
+                color: #333;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .HoCfzc {
+                float: left;
+                
+                min-width: 167px;
+                min-height: 41px;
+                vertical-align: middle;
+                width: 50%;
+            }
+            .FAcADc {
+                float: left;
+                display: inline;
+                min-width: 167px;
+                width: 16%;
+                height: 42px;
+                color: #222;
+                font-size: 13px;
+                line-height: 16px;
+                vertical-align: middle;
+            }
+            .jYcx0e {
+                float: left;
+                display: inline;
+                min-width: 167px;
+                min-height: 41px;
+                vertical-align: middle;
+                width: 50%;
+                font-family: Arial, Helvetica, sans-serif;
+                text-decoration: none;
+            }
+            .PLLUQc {
+                padding-right: 16px;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                display: block;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .jfk-textinput {
+                border-radius: 1px;
+                border: 1px solid #d9d9d9;
+                font-size: 13px;
+                height: 25px;
+                padding: 1px 8px;
+                writing-mode: horizontal-tb;
+                width: 100%;
+                text-align: left;
+            }
+            .jfk-button {
+                line-height: 100%;
+                height: 30px;
+                min-width: 120px;
+                float: right;
+                margin: 10px 0;
+                padding: 0 12px;
+                box-shadow: none;
+                background-color: #4d90fe;
+                border: 1px solid #3079ed;
+                color: #fff;
+                border-radius: 2px;
+                cursor: default;
+                font-size: 11px;
+                font-weight: bold;
+                text-align: center;
+                white-space: nowrap;
+                outline: 0;
+                align-items: flex-start;
+                box-sizing: border-box;
+
+            }
+            .Qy8Xkb {
+                margin: 18px 0;
+                clear: both;
+                border-top: 1px solid #ebebeb;
+            }
+            .footcnt {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            #fbar {
+                background: #f2f2f2;
+                line-height: 40px;
+                height: 82px;
+                min-width: 980px;
+                border-top: 1px solid #dadce0;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+            }
+            .fbar2 {
+                background: #f2f2f2;
+                line-height: 40px;
+                min-width: 980px;
+                border-top: 1px solid #dadce0;
+                vertical-align: baseline;
+                width: 100%;
+                bottom: 0;
+            }
+            .b2hzT {
+                
+                font-size: 14px;
+                margin-left: -27px;
+                line-height: 40px;
+            }
+            .b0KoTc {
+                color: #70757a;
+                padding-left: 27px;
+                margin-left: 45px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Q8LRLc {
+                font-size: 15px;
+                color: #70757a;
+            }
+            .B4GxFc {
+                margin-left: 45px;
+                padding-left: 27px;
+                line-height: 40px;
+                padding: 0;
+                border: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .fsl {
+                white-space: nowrap;
+                line-height: 40px;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 100%;
+                vertical-align: baseline;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Fx4vi {
+                color: #70757a;
+                text-decoration: none;
+                white-space: nowrap;
+                
+                margin: 0;
+                line-height: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+            .Fx4vi:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <div class="bottom-wrapper">
+            <div class="n1xJcf" role="navigation">
+                <div class="Lx3lgb">
+                    <div style="display: block;">
+                        <div class="gb_Na">
+                            <div class="gb_nd">
+                                <div class="gb_Dc">
+                                    <div class="gb_Ec">
+                                        <a class="gb_Fc" aria-label="Go to Google Home" href="index.html">
+                                            <span class="gb_Kc">
+                                                <img src="googlelogo_color_272x92dp.png" style="height: 24px; width: 74px;">
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gb_yd">
+                                <div class="gb_Sd">
+                                    <div style="display: inline; line-height: normal;">
+                                        <div class="gb_l">
+                                            <div class="gb_g">
+                                                <a class="gb_d" href="https://www.google.com.ua/intl/en/about/products?tab=ih">
+                                                    <svg  fill="#5f6368" height="28px" viewBox="0 0 30 30" width="28px" xmlns="http://www.w3.org/2000/svg">
+                                                        <g fill="#5f6368" stroke-width="4">
+                                                        <path d="m6 12c0 1.1046-.89543 2-2 2s-2-.8954-2-2 .89543-2 2-2 2 .8954 2 2z"/>
+                                                        <path d="m14 12c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                        <path d="m22 12c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                        <path d="m6 4c0 1.10457-.89543 2-2 2s-2-.89543-2-2 .89543-2 2-2 2 .89543 2 2z"/>
+                                                        <path d="m14 4c0 1.10457-.8954 2-2 2s-2-.89543-2-2 .8954-2 2-2 2 .89543 2 2z"/>
+                                                        <path d="m22 4c0 1.10457-.8954 2-2 2s-2-.89543-2-2 .8954-2 2-2 2 .89543 2 2z"/>
+                                                        <path d="m6 20c0 1.1046-.89543 2-2 2s-2-.8954-2-2 .89543-2 2-2 2 .8954 2 2z"/>
+                                                        <path d="m14 20c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                        <path d="m22 20c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                        </g>
+                                                    </svg>
+                                                    
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="gb_H">
+                                        <div class="gb_bb">
+                                            <a class="gb_Da" aria-label="google-account" href="https://www.google.com/account/about/">
+                                                <img class="gbii" src="cat0.jpg">
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="appbar">
+                <label style="margin-left: 10px;">Advanced Search</label>
+            </div>
+            <div style="border-bottom: 1px solid #ebebeb;"></div>
+            <div class="Mza7yc">
+                <form action="https://www.google.com/search" id="s1zaZb" method="GET" name="f">
+                    <input value="en-UA"  type="hidden">
+                    <div class="otByu">
+                        <div class="yIQOUb">
+                            <div class="I1Kbt">
+                                <div class="loTAE">
+                                    <span>Find pages with...</span>
+                                </div>    
+                            </div>
+                            <div class="HoCfzc"> </div>
+                        </div>
+                    </div>
+                            
+                    <div class="otByu">
+                        <div class="yIQOUb">
+                            <div class="FAcADc">
+                                <div class="loTAE">
+                                    <label for="xX4UFf">all these words:</label>
+                                </div>
+                            </div>
+                            <div class="jYcx0e">
+                                <div class="PLLUQc">
+                                    <input class="jfk-textinput" id="xX4UFf" value autofocus="autofocus" name="as_q" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yIQOUb">
+                            <div class="FAcADc">
+                                <div class="loTAE">
+                                    <label for="CwYCWc">this exact word or phrase:</label>
+                                </div>
+                            </div>
+                            <div class="jYcx0e">
+                                <div class="PLLUQc">
+                                    <input class="jfk-textinput" id="CwYCWc" name="as_epq" type="text" style="width: 100%; text-align: left;">
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div class="yIQOUb">
+                            <div class="FAcADc">
+                                <div class="loTAE">
+                                    <label for="mSoczb">any of these words:</label>
+                                </div>
+                            </div>
+                            <div class="jYcx0e">
+                                <div class="PLLUQc">
+                                    <input class="jfk-textinput" value id="mSoczb" name="as_oq" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="yIQOUb">
+                            <div class="FAcADc">
+                                <div class="loTAE">
+                                    <label for="t2dX1c">none of these words:</label>
+                                </div>
+                            </div>
+                            <div class="jYcx0e">
+                                <div class="PLLUQc">
+                                    <input class="jfk-textinput" value id="t2dX1c" name="as_eq" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yIQOUb">
+                            <div class="FAcADc"></div>
+                            <div class="jYcx0e" style="text-align: right;">
+                                <input id="CIGjud" name="tbs" type="hidden" value>
+                                <input class="jfk-button" value="Advanced Search" type="submit">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Qy8Xkb"></div>
+                            
+                        
+                    
+                </form>
+            </div>
+        </div> 
+        <div class="footcnt">
+            <div class="footcnt" style="height: 82px;">
+                <div id="fbar">
+                    <div class="fbar2 b2hzT" style="border-top: none;">
+                        <div class="b0KoTc">
+                            <span class="Q8LRLc">Ukraine</span>
+                        </div>
+                    </div>
+                    <div class="fbar2">
+                        <span class="B4GxFc">
+                            <span class="fsl">
+                                <a class="Fx4vi" href="https://support.google.com/websearch/?p=ws_results_help&hl=en-UA&fg=1">Help</a>
+                                <a class="Fx4vi" style="padding-left: 27px;" href="https://policies.google.com/privacy?hl=en-UA&fg=1">Privacy</a>
+                                <a class="Fx4vi" style="padding-left: 27px;" href="https://policies.google.com/terms?hl=en-UA&fg=1">Terms</a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>  
+</html>

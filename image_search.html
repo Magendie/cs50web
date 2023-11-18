@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Search</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            .L3eUgb {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+            }
+
+            .n1xJcf {
+                display: flex;
+                align-items: center;
+                padding: 6px;
+                height: 60px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+            .Lx3lgb {
+                display: inline-block;
+                flex-grow: 1;
+
+            }
+            .gb_Na {
+                min-width: auto;
+                z-index: 986;
+                height: 48px;
+                position: relative;
+                transition: box-shadow 250ms;
+                display: block;
+            }
+            .gb_yd {
+                float: right;
+                padding-left: 32px;
+                box-sizing: border-box;
+                height: 48px;
+                line-height: normal;
+                padding: 0 4px;
+                flex: 0 0 auto;
+                justify-content: flex-end;
+                vertical-align: middle;
+                white-space: nowrap;
+                align-items: center;
+                display: flex;
+
+            }
+            .gb_Sd {
+                float: right;
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_l {
+                padding-left: 4px;
+                padding: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+
+            }
+            .gb_g {
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_d {
+                cursor: pointer;
+                text-decoration: none;
+                opacity: 1;
+                background-position: -64px -29px;
+                border-radius: 50%;
+                padding: 8px;
+                display: inline-block;
+                outline: none;
+                vertical-align: middle;
+                box-sizing: border-box;
+                height: 40px;
+                width: 40px;
+                line-height: normal;
+            }
+            .gb_d:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+
+            }
+            .gb_i {
+                color: #5f6368;
+                opacity: 1;
+                height: 24px;
+                width: 24px;
+                font-weight:700;
+            }
+
+            .gb_H {
+                flex: 0 1 auto;
+                padding: 4px;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_bb {
+                flex: 0 1 auto;
+                position: relative;
+                display: block;
+                line-height: normal;
+                white-space: nowrap;
+
+            }
+            .gb_Da {
+                cursor: pointer;
+                background-position: -64px -29px;
+                text-decoration: none;
+                padding: 4px;
+                flex: 0 1 auto;
+                border-radius: 50%;
+                display: inline-block;
+                outline: none;
+                vertical-align: middle;
+                box-sizing: border-box;
+                height: 40px;
+                width: 40px;
+            }
+            .gb_Da:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+            }
+            .gbii {
+                background-size: 32px 32px;
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 0px;
+                position: relative;
+                height: 32px;
+                width: 32px;
+                z-index: 0;
+                
+                cursor: pointer;
+                line-height: normal;
+                white-space: nowrap;
+            }
+            .gbii:after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                bottom: -4px;
+                left: -4px;
+                right: -4px;
+            }
+            .gb_d:hover {
+                background-color: #f1eff2f2;
+                opacity: 1;
+            }
+            .gb_Da:hover {
+                background-color: #f1eff2f2;
+                opacity: 1;
+            }
+            .LLD4me {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 92px;
+                max-height: 290px;
+                height: calc(100%-560px);
+                flex-shrink: 0;
+                box-sizing: border-box;
+            }
+            .rSk4se {
+                max-height: 92px;
+                position: relative;
+                height: 100%;
+                margin-top: auto;
+                display: block;
+            }
+            .lnXdpd {
+                max-height: 100%;
+                max-width: 100%;
+                object-fit: contain;
+                object-position: center bottom;
+                width: auto;
+                height: 92px;
+            }
+            .T8Vave {
+                color: #4285f4;
+                font: 16px/16px roboto-regular, arial, sans-serif;
+                position: absolute;
+                left: 215px;
+                bottom: 0;
+                white-space: nowrap;
+
+            }
+            .o3j99 {
+                padding: 20px;
+                max-height: 160px;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                display: block;
+            }
+            .A8SBwf {
+                margin: 0 auto;
+                width: auto;
+                max-width: 584px;
+                padding-top: 6px;
+                position: relative;
+                display: block;
+            }
+            .RNNxgb {
+                display: flex;
+                z-index: 3;
+                position: relative;
+                min-height: 44px;
+                background: #fff;
+                border: 1px solid #dfe1e5;
+                box-shadow: none;
+                border-radius: 24px;
+                margin: 0 auto;
+                width: auto;
+                max-width: 584px;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #202124;
+            }
+            .SDkEP {
+                flex: 1;
+                display: flex;
+                padding: 5px 8px 0 14px;
+            }
+            .imsearch {
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
+                margin-top: 3px;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #202124;
+                margin-bottom: 8px;
+                line-height: 22px;
+                overflow-x: hidden;
+                resize: none;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                word-wrap: break-word;
+                outline: none;
+                display: flex;
+                writing-mode: horizontal-tb;
+                flex-direction: column;
+            }
+            .loop {
+                display: flex;
+                align-items: center;
+                padding-right: 13px;
+                margin-top: -5px;
+                height: 46px;
+            }
+            .Ccadnb {
+                margin: auto;
+                display: block;
+            }
+            .QCzoec {
+                height: 20px;
+                line-height: 20px;
+                width: 20px;
+                color: #9aa0a6;
+                display: inline-block;
+                fill: currentColor;
+                position: relative;
+                vertical-align: middle
+            }
+            .micCam {
+                display: flex;
+                flex: 0 0 auto;
+                margin-top: -5px;
+                align-items: stretch;
+                flex-direction: row;
+                height: 44px;
+            }
+        
+            .voice {
+                flex: 1 0 auto;
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                border: 0;
+                background: transparent;
+                outline: none;
+                padding: 0 8px;
+                width: 40px;
+                line-height: 44px;
+                font-size: 14px;
+            }
+            .Tg7LZd {
+                flex: 0 0 auto;
+                padding-right: 13px;
+                height: 44px;
+                width: 44px;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                box-sizing: border-box;
+            }
+            .zgAlFc {
+                background: none;
+                color: #4285f4;
+                height: 24px;
+                width: 24px;
+                margin: auto;
+                display: block;
+            }
+            .z1asCe {
+                display: inline-block;
+                fill: currentColor;
+                height: 24px;
+                line-height: 24px;
+                position: relative;
+                width: 24px;
+                color: #4285f4;
+            }
+
+
+            #buttom-part {
+                background: #f2f2f2;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                display: block;
+            }
+
+            #buttom1 {
+                padding: 15px 30px;
+                border-bottom: 1px solid #dadce0;
+                font-size: 15px;
+                color: #70757a;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 48px;
+            }
+
+            #buttom2 {
+                justify-content: space-evenly;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 20px;
+                color: #70757a;
+                height: 46px;
+            }
+
+            #left-group {
+                justify-content: space-evenly;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .pHiOh {
+                color: #70757a;
+                display: block;
+                padding: 15px;
+                white-space: nowrap;
+                text-decoration: none;
+                cursor: auto;
+                font-size: 14px;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+
+            #right-group {
+                justify-content: space-evenly;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .custbot {
+                margin: 0;
+                border: 0;
+                height: 46px;
+                border-radius: 0;
+            }
+            .custbot:hover {
+                color: #70757a;
+            }
+            .pHiOh:hover {
+                text-decoration: underline;
+            }
+            .RNNxgb:hover {
+                background-color: #fcfcfc;
+                border: 1px solid #dadce0;
+                box-shadow:5px 5px 5px -5px rgba(0, 0, 0, 0.3);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <div class="L3eUgb">
+            <div class="n1xJcf" role="navigation">
+                <div class="Lx3lgb">
+                    <div style="display: block;">
+                        <div class="gb_Na">
+                            <div class="gb_yd">
+                                <div class="gb_Sd">
+                                    <div style="display: inline; line-height: normal;">
+                                        <div class="gb_l">
+                                            <div class="gb_g">
+                                                <a class="gb_d" href="https://www.google.com.ua/intl/en/about/products?tab=ih">
+                                                    <svg  fill="#5f6368" height="28px" viewBox="0 0 30 30" width="28px" xmlns="http://www.w3.org/2000/svg">
+                                                        <g fill="#5f6368" stroke-width="4">
+                                                          <path d="m6 12c0 1.1046-.89543 2-2 2s-2-.8954-2-2 .89543-2 2-2 2 .8954 2 2z"/>
+                                                          <path d="m14 12c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                          <path d="m22 12c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                          <path d="m6 4c0 1.10457-.89543 2-2 2s-2-.89543-2-2 .89543-2 2-2 2 .89543 2 2z"/>
+                                                          <path d="m14 4c0 1.10457-.8954 2-2 2s-2-.89543-2-2 .8954-2 2-2 2 .89543 2 2z"/>
+                                                          <path d="m22 4c0 1.10457-.8954 2-2 2s-2-.89543-2-2 .8954-2 2-2 2 .89543 2 2z"/>
+                                                          <path d="m6 20c0 1.1046-.89543 2-2 2s-2-.8954-2-2 .89543-2 2-2 2 .8954 2 2z"/>
+                                                          <path d="m14 20c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                          <path d="m22 20c0 1.1046-.8954 2-2 2s-2-.8954-2-2 .8954-2 2-2 2 .8954 2 2z"/>
+                                                        </g>
+                                                      </svg>
+                                                      
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="gb_H">
+                                        <div class="gb_bb">
+                                            <a class="gb_Da" aria-label="google-account" href="https://www.google.com/account/about/">
+                                                <img class="gbii" src="cat0.jpg">
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="LLD4me">
+                <div class="rSk4se">
+                    <img class="lnXdpd" src="googlelogo_color_272x92dp.png" alt="Google Images">
+                    <span class="T8Vave">Images</span>
+                </div>
+            </div>
+            <div class="o3j99">
+                <form action="https://www.google.com/search" method="GET" role="search" target="_blank">
+                    <div style="display: block;">
+                        <div class="A8SBwf">
+                            <div class="RNNxgb">
+                                <div class="SDkEP">
+                                    <div class="loop">
+                                        <div class="Ccadnb">
+                                            <span class="QCzoec">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 19 16" style="height:16px;line-height:16px;width:16px; color:#9aa0a6; display: block; width: 100%; height: 100%;">
+                                                    <g id="magnifying-glass--glass-search-magnifying" style="width: 16px; height: 16px;">
+                                                        <path id="Vector" stroke="#9aa0a6" stroke-linecap="round" stroke-linejoin="round" d="M5.571428571428571 10.678571428571429c2.8206007142857143 0 5.107142857142858 -2.286542142857143 5.107142857142858 -5.107142857142858S8.392029285714287 0.4642857142857143 5.571428571428571 0.4642857142857143 0.4642857142857143 2.7508278571428573 0.4642857142857143 5.571428571428571s2.286542142857143 5.107142857142858 5.107142857142858 5.107142857142858Z" stroke-width="1.5">
+                                                        </path><path id="Vector_2" stroke="#9aa0a6" stroke-linecap="round" stroke-linejoin="round" d="M12.535714285714286 12.535714285714286 9.285714285714286 9.285714285714286" stroke-width="1.5">
+                                                        </path></g></svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <input class="imsearch" type="text" name="q">
+                                    <input type="hidden" name="tbm" value="isch">
+                                    <div class="micCam">
+                                        <button class="btn btn-outline-secondary-light voice" type="button" style="border: 0;">
+                                            <img src="Google-Mic-Icon.svg" alt="googlemic" style="width: 35px; height: 40px; vertical-align: middle;">
+                                        </button>
+                                        
+                                        <button class="btn btn-outline-secondary-light voice" type="button" style="border: 0;">
+                                            <img src="Google_Lens_Icon.svg.png" alt="googlelens" style="height: 24px; width: 24px; vertical-align: middle;">
+                                        </button> 
+                                    </div>
+                                </div>
+                                <button class="Tg7LZd" type="submit">
+                                    <div class="zgAlFc">
+                                        <span class="z1asCe">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 14" style="height:16px;line-height:16px;width:19px; color:#4285f4; display: block; width: 100%; height: 100%;">
+                                                <g id="magnifying-glass--glass-search-magnifying" style="width: 16px; height: 16px;">
+                                                    <path id="Vector" stroke="#4285f4" stroke-linecap="round" stroke-linejoin="round" d="M5.571428571428571 10.678571428571429c2.8206007142857143 0 5.107142857142858 -2.286542142857143 5.107142857142858 -5.107142857142858S8.392029285714287 0.4642857142857143 5.571428571428571 0.4642857142857143 0.4642857142857143 2.7508278571428573 0.4642857142857143 5.571428571428571s2.286542142857143 5.107142857142858 5.107142857142858 5.107142857142858Z" stroke-width="1.5">
+                                                    </path><path id="Vector_2" stroke="#4285f4" stroke-linecap="round" stroke-linejoin="round" d="M12.535714285714286 12.535714285714286 9.285714285714286 9.285714285714286" stroke-width="1.5">
+                                                    </path></g></svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div style="display: block; height: 225px;">
+            </div>
+            <div id="buttom-part">
+                <div id="buttom1">
+                    Ukraine
+                </div>
+                <div id="buttom2">
+                    <div id="left-group">
+                        <a class="pHiOh" href="https://about.google/?utm_source=google-UA&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+                            About
+                        </a>
+                        <a class="pHiOh" href="https://www.google.com/intl/en_ua/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+                            Advertising
+                        </a>
+                        <a class="pHiOh" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">
+                            Business
+                        </a>
+                        <a class="pHiOh" href="https://google.com/search/howsearchworks/?fg=1">
+                            How Search works
+                        </a>
+                    </div>
+                    <div id="right-group">
+                        <a class="pHiOh" href="https://policies.google.com/privacy?hl=en-UA&fg=1">
+                            Privacy
+                        </a>
+                        <a class="pHiOh" href="https://policies.google.com/terms?hl=en-UA&fg=1">
+                            Terms
+                        </a>
+                        <div class="btn-group dropup">
+                            <button type="button"  style="background-color: #f2f2f2;" class="btn btn-light dropdown-toggle pHiOh custbot" data-bs-toggle="dropdown" aria-expanded="false">
+                                Settings
+                            </button>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item" href="https://www.google.com/preferences?hl=en-UA&client=safari&fg=1">Search settings</a></li>
+                                <li><a class="dropdown-item" href="advanced_search.html">Advanced search</a></li>
+                                <li><a class="dropdown-item" href="https://myaccount.google.com/yourdata/search?utm_source=googlemenu&fg=1">Your data in Search</a></li>
+                                <li><a class="dropdown-item" href="">Search history</a></li>
+                                <li><a class="dropdown-item" href="https://support.google.com/websearch/?visit_id=638353247374924706-2618382115&hl=en-UA&rd=2#topic=3378866">Search help</a></li>
+                                <li><a class="dropdown-item" href="https://www.google.com/?client=safari&pccc=1">Send feedback</a></li>
+                                <li><hr class="dropdown-devider"></li>
+                                <li><a class="dropdown-item">Dark theme: Off</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </body>
+</html>
